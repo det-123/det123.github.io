@@ -14,22 +14,22 @@ function pageHome(data) {
     el("div", {}, mediaBox(h.heroImage ? `/assets/img/${h.heroImage}` : "", "Hero image"))
   ]));
 
-  const latest = el("section", { class: "section" }, el("div", { class: "container" }, [
-    el("h2", { class: "sectionTitle" }, h.latestTitle || "Latest"),
-    el("div", { class: "postGrid" }, (h.latestItems || []).map((it) =>
-      el("a", { class: "post", href: it.href || "/resources/" }, [
-        el("div", { class: "postMedia" }, it.image && it.image.trim().length > 0
-          ? el("img", { class: "postImg", src: `/assets/img/${it.image}`, alt: it.title })
-          : null
-        ),
-        el("div", { class: "postBody" }, [
-          el("h3", {}, it.title),
-          el("p", { class: "muted" }, it.desc || "")
-        ])
-      ])
-    )),
-    el("div", { style: "margin-top:34px;" }, rule())
-  ]));
+//  const latest = el("section", { class: "section" }, el("div", { class: "container" }, [
+//    el("h2", { class: "sectionTitle" }, h.latestTitle || "Latest"),
+//   el("div", { class: "postGrid" }, (h.latestItems || []).map((it) =>
+//      el("a", { class: "post", href: it.href || "/resources/" }, [
+//        el("div", { class: "postMedia" }, it.image && it.image.trim().length > 0
+//          ? el("img", { class: "postImg", src: `/assets/img/${it.image}`, alt: it.title })
+//         : null
+//      ),
+//        el("div", { class: "postBody" }, [
+//          el("h3", {}, it.title),
+//          el("p", { class: "muted" }, it.desc || "")
+//        ])
+//      ])
+//    )),
+//    el("div", { style: "margin-top:34px;" }, rule())
+//  ]));
 
   const cred = el("section", { class: "section" }, el("div", { class: "container split" }, [
     el("div", {}, [
@@ -82,5 +82,5 @@ function pageHome(data) {
     ))
   ]));
 
-  return [hero, latest, cred, solutions, cta, expertise, social];
+  return [hero, cred, solutions, cta, expertise, social];
 }
