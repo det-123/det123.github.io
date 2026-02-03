@@ -65,8 +65,8 @@ function footer(site) {
 function pageHome(data) {
   const h = data.home || {};
 
-  const hero = el("section", { class: "hero" }, el("div", { class: "container heroGrid" }, [
-    el("div", {}, [
+  const hero = el("section", { class: "hero" }, el("div", { class: "container" }, [
+    el("div", { class: "heroStack" }, [
       el("p", { class: "kicker" }, h.heroKicker || ""),
       el("h1", { class: "h1" }, h.heroHeadline || ""),
       el("p", { class: "sub" }, h.heroSubhead || ""),
@@ -75,7 +75,14 @@ function pageHome(data) {
         button(data.site.secondaryButtonText || "Services", data.site.secondaryButtonHref || "/service-offerings/", "ghost")
       ])
     ]),
-    el("div", {}, mediaBox(h.heroImage ? `/assets/img/${h.heroImage}` : "", "Hero image"))
+    el("div", { style: "margin-top:22px;" },
+      mediaBox(h.heroImage ? `/assets/img/${h.heroImage}` : "", "Hero image")
+    )
+  ]));
+
+  const divider1 = el("div", { class: "divider" }, el("div", { class: "container" }, [
+    rule(),
+    el("p", { class: "dividerText" }, "Section")
   ]));
 
   const cred = el("section", { class: "section" }, el("div", { class: "container split" }, [
@@ -88,6 +95,11 @@ function pageHome(data) {
     el("div", {}, mediaBox(h.credImage ? `/assets/img/${h.credImage}` : "", "About image"))
   ]));
 
+  const divider2 = el("div", { class: "divider" }, el("div", { class: "container" }, [
+    rule(),
+    el("p", { class: "dividerText" }, "Section")
+  ]));
+
   const solutions = el("section", { class: "section" }, el("div", { class: "container" }, [
     el("h2", { class: "sectionTitle" }, h.solutionsTitle || "Solutions"),
     el("div", { class: "cardGrid4" }, (h.solutions || []).map((s) =>
@@ -98,8 +110,12 @@ function pageHome(data) {
           button(s.buttonText || "Explore", s.buttonHref || "/service-offerings/", "outline")
         )
       ])
-    )),
-    el("div", { style: "margin-top:34px;" }, rule())
+    ))
+  ]));
+
+  const divider3 = el("div", { class: "divider" }, el("div", { class: "container" }, [
+    rule(),
+    el("p", { class: "dividerText" }, "Section")
   ]));
 
   const cta = el("section", { class: "section" }, el("div", { class: "container" }, [
@@ -110,6 +126,11 @@ function pageHome(data) {
       ]),
       el("div", {}, button(h.ctaButtonText || "Contact", h.ctaButtonHref || "/contact/"))
     ])
+  ]));
+
+  const divider4 = el("div", { class: "divider" }, el("div", { class: "container" }, [
+    rule(),
+    el("p", { class: "dividerText" }, "Section")
   ]));
 
   const expertise = el("section", { class: "section" }, el("div", { class: "container" }, [
@@ -127,7 +148,7 @@ function pageHome(data) {
     ))
   ]));
 
-  return [hero, cred, solutions, cta, expertise, social];
+  return [hero, divider1, cred, divider2, solutions, divider3, cta, divider4, expertise, social];
 }
 
 function pageAbout(data) {
