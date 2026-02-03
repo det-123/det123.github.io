@@ -1,11 +1,11 @@
 {
   "site": {
     "name": "Dominique E. Thomas",
-    "primaryButtonText": "Book a consultation",
+    "primaryButtonText": "Get in touch",
     "primaryButtonHref": "/contact/",
-    "secondaryButtonText": "Explore services",
+    "secondaryButtonText": "Service offerings",
     "secondaryButtonHref": "/service-offerings/",
-    "footerNote": "HR Consulting"
+    "footerNote": "Fractional HR executive and trusted advisor"
   },
   "nav": [
     { "label": "Home", "href": "/" },
@@ -15,88 +15,92 @@
     { "label": "Contact", "href": "/contact/" }
   ],
   "home": {
-    "heroKicker": "People decisions are rarely simple.",
-    "heroHeadline": "Your Dedicated Human Resources Presence When It Matters Most",
-    "heroSubhead": "I work alongside founders and executives to navigate complex moments with clarity, consistency, and care, bringing an experienced HR perspective into the decisions that shape how an organization operates and grows.",
-    "heroImage": "",
-    "servicesTitle": "Ways we can work together",
-    "services": [
+    "heroKicker": "People decisions, clarified",
+    "heroHeadline": "People decisions that protect your business and your culture",
+    "heroSubhead": "Fractional HR leadership for founders and business leaders navigating employee relations, multistate compliance, and scalable people systems.",
+    "heroImage": "dom-headshot-beige.png",
+
+    "credKicker": "About",
+    "credHeadline": "Executive level HR, without the overhead",
+    "credBody": "Most people decisions are not hard because leaders lack values. They are hard because the facts are incomplete, the rules are complex, and the consequences are real.\n\nFor nearly two decades, I have advised founders and business leaders across more than 250 organizations, from growing startups to complex multistate employers. I serve as a fractional HR executive and trusted advisor, providing senior level HR leadership without the need for a full time hire.\n\nIf you are expanding across states, navigating a high stakes employee matter, or building the people foundation your growth requires, let’s talk. A brief conversation is often enough to clarify what matters most and determine the right next step.",
+    "credButtonText": "Learn more",
+    "credButtonHref": "/about/",
+    "credImage": "dom-headshot-brown.png",
+
+    "solutionsTitle": "Solutions",
+    "solutions": [
       {
-        "title": "Fractional and Interim HR Leadership",
-        "desc": "Senior level HR leadership embedded in your organization to lead people strategy, manage risk, and guide critical decisions during growth, transition, or uncertainty",
-        "href": "/service-offerings/"
+        "title": "Fractional HR executive",
+        "desc": "Senior level counsel, decision support, and leadership without a full time hire.",
+        "buttonText": "Explore",
+        "buttonHref": "/service-offerings/"
       },
       {
-        "title": "Ongoing Advisory Support",
-        "desc": "On demand, trusted HR partnership that provides steady guidance, compliance oversight, and decision support as people challenges arise.",
-        "href": "/service-offerings/"
+        "title": "Employee relations and risk",
+        "desc": "High stakes matters, investigations, performance, and documentation that holds up.",
+        "buttonText": "Explore",
+        "buttonHref": "/service-offerings/"
       },
       {
-        "title": "Project Based Engagements",
-        "desc": "Focused, time bound HR initiatives designed to address specific needs, strengthen systems, and deliver clear, measurable outcomes.",
-        "href": "/service-offerings/"
+        "title": "Multistate compliance",
+        "desc": "Practical compliance support across states, grounded in risk and real operational constraints.",
+        "buttonText": "Explore",
+        "buttonHref": "/service-offerings/"
+      },
+      {
+        "title": "People infrastructure",
+        "desc": "Policies, manager tools, workflows, and systems that scale with the business.",
+        "buttonText": "Explore",
+        "buttonHref": "/service-offerings/"
       }
     ],
-    "aboutKicker": "HR guidance",
-    "aboutHeadline": "Clear advice, grounded in real world constraints",
-    "aboutBody": "I help leaders navigate complex employee situations, formalize processes, and create practical tools that managers actually use.",
-    "aboutButtonText": "Schedule a consultation",
-    "aboutButtonHref": "/contact/",
-    "aboutImage": "dom-headshot-beige.jpg"
-    "resourcesKicker": "Resources",
-    "resourcesHeadline": "Latest insights",
-    "resourcesButtonText": "View all",
-    "resourcesButtonHref": "/resources/",
-    "featuredPosts": [
-      { "title": "Manager basics for performance conversations", "blurb": "A practical structure to reduce avoidance and document well." },
-      { "title": "When an employee complaint is a risk signal", "blurb": "How to assess and respond quickly without overreacting." },
-      { "title": "What to standardize before you hire again", "blurb": "Processes that keep culture consistent while you grow." },
-      { "title": "Investigation hygiene leaders forget", "blurb": "Small moves that prevent big problems later." }
-    ],
-    "signupHeadline": "Stay in the loop",
-    "signupBody": "Monthly ideas, templates, and practical guidance. No spam.",
-    "signupNote": "For now this form does not send. We can connect it to a free form tool when you are ready."
+
+    "ctaTitle": "Let’s talk",
+    "ctaBody": "If you are expanding across states, navigating a high stakes employee matter, or building the people foundation your growth requires, let’s talk.",
+    "ctaButtonText": "Contact",
+    "ctaButtonHref": "/contact/",
+
+    "expertiseKicker": "Expertise",
+    "expertiseHeadline": "Practical support that holds up in real organizations",
+    "expertiseBody": "My work sits at the intersection of organizational development, employee relations, and scalable people infrastructure that supports growth and helps employees thrive. I strengthen multistate compliance, reduce risk, and help leaders make informed decisions grounded in quality information and a clear understanding of tradeoffs.",
+
+    "socialTitle": "Follow along",
+    "socialLinks": [
+      { "label": "LinkedIn", "href": "" }
+    ]
   },
   "about": {
     "kicker": "About",
     "headline": "Your steady HR presence when it matters most",
-    "body": "Dominique Thomas is a senior Human Resources leader with over 15 years of experience advising organizations in complex and regulated environments. She has partnered with more than 100 companies across industries and growth stages, supporting leaders in building people infrastructure that enables growth while managing risk.
-
-Her expertise spans HR compliance, employee relations, employee benefits, leave of absence administration, talent management, and HR operations. Dominique is known for translating complex requirements into practical systems through HRIS implementations, operating frameworks, and decision support tools that improve consistency and judgment across organizations.
-
-A significant focus of her work is developing HR capability. She has led and mentored HR professionals from Generalist through Director levels, designing competency models, learning and development programs, and mentorship structures that strengthen leadership effectiveness and scalability.
-
-Dominique holds dual certifications as a SHRM SCP and SPHR professional. She earned a Master’s degree in Human Resources Development and a Master’s in Business Administration from Claremont Graduate University, and a Bachelor’s degree in Strategic and Organizational Communication from Temple University.
-
-She works with business and HR leaders who value clarity, rigor, and experienced judgment when decisions carry meaningful consequences.",
-"image": "dom-headshot-brown.jpg"
+    "body": "Most people decisions are not hard because leaders lack values. They are hard because the facts are incomplete, the rules are complex, and the consequences are real.\n\nFor nearly two decades, I have advised founders and business leaders across more than 250 organizations, from growing startups to complex multistate employers. I serve as a fractional HR executive and trusted advisor, providing senior level HR leadership without the need for a full time hire.\n\nMy work sits at the intersection of organizational development, employee relations, and scalable people infrastructure that supports growth and helps employees thrive. I strengthen multistate compliance, reduce risk, and help leaders make informed decisions grounded in quality information and a clear understanding of tradeoffs. I also build the systems that allow organizations to scale with confidence, including policies, performance management, learning and development, manager tools, and practical workflows that hold up in real organizations.\n\nIf you are expanding across states, navigating a high stakes employee matter, or building the people foundation your growth requires, let’s talk. A brief conversation is often enough to clarify what matters most and determine the right next step.",
+    "image": "dom-headshot-brown.png"
   },
   "services": {
     "kicker": "Service offerings",
     "headline": "Support that meets the moment",
-    "intro": "Paste your services overview here.",
+    "intro": "Clear, senior level support across employee relations, compliance, organizational development, and scalable people systems.",
     "offers": [
       {
-        "title": "On call counsel",
-        "desc": "What it is, who it is for, and what outcomes clients get.",
-        "bullets": ["Example scope item", "Example scope item", "Example scope item"]
+        "title": "Fractional HR executive",
+        "desc": "Ongoing senior level advisory support for leaders who need steady, informed HR leadership without a full time hire.",
+        "bullets": ["Decision support and guidance", "Leadership counsel for complex situations", "Practical prioritization and execution support"]
       },
       {
-        "title": "Systems and compliance",
-        "desc": "What it is, who it is for, and what outcomes clients get.",
-        "bullets": ["Example scope item", "Example scope item", "Example scope item"]
+        "title": "Employee relations and investigations",
+        "desc": "High stakes employee matters handled with care, speed, and documentation that holds up.",
+        "bullets": ["Intake, assessment, and risk triage", "Investigations and recommendations", "Performance and conduct documentation support"]
       },
       {
-        "title": "Training and development",
-        "desc": "What it is, who it is for, and what outcomes clients get.",
-        "bullets": ["Example scope item", "Example scope item", "Example scope item"]
+        "title": "Multistate compliance and infrastructure",
+        "desc": "Build or strengthen the people foundation needed for growth across locations.",
+        "bullets": ["Policies and handbooks", "Manager tools and workflows", "Foundational people systems support"]
       }
     ]
   },
   "resources": {
     "kicker": "Resources",
     "headline": "Tools, templates, and guidance",
-    "intro": "Paste your resources intro here.",
+    "intro": "This section is ready when you are. Add items over time or link out to a newsletter.",
     "items": [
       { "title": "Resource title", "desc": "Short description of what it helps with." },
       { "title": "Resource title", "desc": "Short description of what it helps with." },
@@ -107,25 +111,18 @@ She works with business and HR leaders who value clarity, rigor, and experienced
   "contact": {
     "kicker": "Contact",
     "headline": "Tell me what you are navigating",
-    "body": "Add your preferred contact method here. You can include an email address, a scheduling link, and what response time to expect.",
+    "body": "Share what is happening and what outcome you are aiming for. I will respond with the right next step.",
     "emailLabel": "Email",
-    "email": "det@dominiqueethomas.com",
+    "email": "you@example.com",
     "schedulerLabel": "Scheduler link",
     "schedulerHref": "",
-    "schedulerText": "Add your scheduling link"
+    "schedulerText": "Schedule a conversation"
   },
   "portfolio": {
     "kicker": "Portfolio",
     "headline": "Selected work",
-    "intro": "This page is not linked in the main menu. Share examples of previous work here.",
+    "intro": "This page is not linked in the main navigation. Share selected examples here when ready.",
     "projects": [
-      {
-        "title": "Project title",
-        "context": "Client type and situation.",
-        "work": "What you delivered.",
-        "impact": "Outcomes and results.",
-        "image": ""
-      },
       {
         "title": "Project title",
         "context": "Client type and situation.",
