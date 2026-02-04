@@ -124,6 +124,19 @@ p:last-child{ margin-bottom: 0; }
   padding: 28px;
 }
 
+.centerStatement{
+  text-align: center;
+  font-weight: 600;
+}
+
+.centerStatement p{
+  margin: 0 0 24px 0;
+}
+
+.centerStatement p:last-child{
+  margin-bottom: 0;
+}
+
 .kicker{
   font-size: 12px;
   letter-spacing: 0.9px;
@@ -152,8 +165,7 @@ p:last-child{ margin-bottom: 0; }
 }
 
 .portraitFrame{
-  border: 1px solid var(--line);
-  background: #ffffff;
+  background: transparent;
 }
 
 .portraitImg{
@@ -161,7 +173,6 @@ p:last-child{ margin-bottom: 0; }
   height: 360px;
   object-fit: cover;
   display: block;
-  border-bottom: 1px solid var(--line2);
   background: rgba(0,0,0,0.02);
 }
 
