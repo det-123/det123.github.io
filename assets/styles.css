@@ -181,6 +181,63 @@ p:last-child{ margin-bottom: 0; }
   background: var(--clay);
 }
 
+.accordion{
+  display: grid;
+  gap: 18px;
+}
+
+.accordionItem{
+  border: 1px solid var(--line);
+  background: #ffffff;
+}
+
+.accordionSummary{
+  list-style: none;
+  cursor: pointer;
+  padding: 18px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  font-weight: 600;
+}
+
+.accordionSummary::-webkit-details-marker{
+  display: none;
+}
+
+.accordionChevron{
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1;
+}
+
+details[open] .accordionChevron{
+  transform: rotate(180deg);
+}
+
+.accordionBody{
+  border-top: 1px solid var(--line2);
+  padding: 18px 18px 22px 18px;
+}
+
+.accordionLabel{
+  font-size: 12px;
+  letter-spacing: 0.9px;
+  text-transform: uppercase;
+  color: var(--clay);
+  margin: 0 0 8px 0;
+}
+
+.accordionBody p{
+  margin: 0 0 24px 0;
+}
+
+.accordionBody p:last-child{
+  margin-bottom: 0;
+}
+
+
 @media (max-width: 980px){
   .portraitImg{
     height: 320px;
