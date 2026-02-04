@@ -1,1 +1,5 @@
+User-agent: *
+Disallow: /thought_leadership.html
+Disallow: /resources.html
+Disallow: /portfolio.html
 
