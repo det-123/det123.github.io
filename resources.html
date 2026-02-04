@@ -1,1 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>Resources | Dominique E. Thomas</title>
+  <meta name="description" content="Downloadable HR resources and tools by Dominique E. Thomas." />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div class="layout">
+
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="name">Dominique E. Thomas</div>
+        <div class="role">Human Resources Leader and Advisor</div>
+      </div>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="expertise.html">Expertise</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </aside>
+
+    <main class="main">
+
+      <section class="panel">
+        <h1>Resources</h1>
+        <p>Effective HR decisions are rarely supported by generic templates or best practice lists. The resources shared here are designed to help leaders and HR professionals think more clearly about risk, trade offs, and execution in complex people situations. Each resource reflects the same judgment based approach I bring to advisory and consulting work.</p>
+      </section>
+
+      <section class="panel">
+        <div class="kicker">Downloads</div>
+        <div id="resourceList" class="grid"></div>
+        <div class="hr"></div>
+        <p class="muted">This page is hidden for now. When you are ready, we will add it to navigation.</p>
+      </section>
+
+      <section class="panel">
+        <small>Dominique E. Thomas 2026</small>
+      </section>
+
+    </main>
+
+  </div>
+
+<script>
+  async function loadResources(){
+    const list = document.getElementById("resourceList");
+    try{
+      const res = await fetch("data/resources.json", { cache: "no-store" });
+      const resources = await res.json();
+
+      if(!Array.isArray(resources) || resources.length === 0){
+        list.innerHTML = '<div class="panel tight"><div class="cardTitle">Resources will be added soon</div><div class="muted">Upload a PDF and add one entry to data/resources.json to create a download card.</div></div>';
+        return;
+      }
+
+      const items = resources.map(r => {
+        const title = r.title || "Resource";
+        const description = r.description || "";
+        const file = r.file || "#";
+        const linkText = r.linkText || "Download";
+        return `
+          <div class="panel tight">
+            <div class="cardTitle">${title}</div>
+            <div style="margin-top:8px;" class="muted">${description}</div>
+            <div style="margin-top:14px;">
+              <a class="button" href="${file}">${linkText}</a>
+            </div>
+          </div>
+        `;
+      }).join("");
+
+      list.innerHTML = items;
+
+    } catch(e){
+      list.innerHTML = '<div class="panel tight"><div class="cardTitle">Resources could not load</div><div class="muted">Check that data/resources.json exists and contains valid JSON.</div></div>';
+    }
+  }
+  loadResources();
+</script>
+</body>
+</html>
 
