@@ -5,162 +5,716 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Dominique E. Thomas</title>
   <meta name="description" content="Human Resources Leader and Advisor. Senior HR expertise for complex people decisions." />
-  <link rel="stylesheet" href="assets/styles.css" />
+
+  <!--
+    This page uses the new layout CSS inline so you can preview instantly.
+    Later, you can move everything inside this <style> block into assets/styles.css
+    and delete this block.
+  -->
+  <style>
+    :root{
+      --bg: #fbfaf7;
+      --ink: #0f1115;
+      --muted: rgba(15,17,21,.72);
+      --soft: rgba(15,17,21,.08);
+      --card: rgba(255,255,255,.72);
+      --accent: #7a1f2b;
+      --accent2: #0f2c3f;
+      --radius: 18px;
+      --shadow: 0 18px 55px rgba(15,17,21,.12);
+      --shadow2: 0 10px 30px rgba(15,17,21,.10);
+      --max: 1120px;
+    }
+
+    *{ box-sizing: border-box; }
+    html, body{ height: 100%; }
+    body{
+      margin: 0;
+      background: radial-gradient(900px 600px at 20% 5%, rgba(122,31,43,.10), transparent 60%),
+                  radial-gradient(900px 600px at 75% 15%, rgba(15,44,63,.10), transparent 60%),
+                  var(--bg);
+      color: var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      letter-spacing: .1px;
+    }
+
+    a{ color: inherit; text-decoration: none; }
+    a:focus{ outline: 3px solid rgba(122,31,43,.35); outline-offset: 3px; border-radius: 10px; }
+
+    .container{
+      width: min(var(--max), calc(100% - 44px));
+      margin: 0 auto;
+    }
+
+    .topbar{
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(14px);
+      background: rgba(251,250,247,.72);
+      border-bottom: 1px solid var(--soft);
+    }
+
+    .topbarInner{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+      gap: 14px;
+    }
+
+    .brand{
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      min-width: 240px;
+    }
+
+    .brandMark{
+      width: 40px;
+      height: 40px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(122,31,43,.95), rgba(15,44,63,.9));
+      box-shadow: 0 12px 30px rgba(15,17,21,.18);
+      flex: 0 0 auto;
+    }
+
+    .brandName{
+      font-weight: 700;
+      letter-spacing: .2px;
+      line-height: 1.1;
+    }
+
+    .brandTag{
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.25;
+      margin-top: 2px;
+      max-width: 420px;
+    }
+
+    .nav{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 14px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .nav a{
+      padding: 10px 12px;
+      border-radius: 12px;
+      transition: background .15s ease, color .15s ease;
+    }
+
+    .nav a:hover{
+      background: rgba(15,17,21,.06);
+      color: var(--ink);
+    }
+
+    .nav a.active{
+      background: rgba(15,17,21,.06);
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .cta{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 11px 14px;
+      border-radius: 14px;
+      background: var(--ink);
+      color: #fff;
+      box-shadow: var(--shadow2);
+      transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
+      font-size: 14px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .cta:hover{
+      transform: translateY(-1px);
+      box-shadow: 0 16px 38px rgba(15,17,21,.18);
+      background: #12151b;
+    }
+
+    .hero{
+      padding: 64px 0 34px;
+    }
+
+    .heroGrid{
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .kicker{
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+    }
+
+    .kickerDot{
+      width: 8px;
+      height: 8px;
+      border-radius: 99px;
+      background: var(--accent);
+      box-shadow: 0 0 0 6px rgba(122,31,43,.10);
+    }
+
+    .headline{
+      margin: 18px 0 0;
+      font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+      font-size: clamp(40px, 4.8vw, 64px);
+      line-height: 1.02;
+      letter-spacing: .01em;
+    }
+
+    .subhead{
+      margin: 16px 0 0;
+      max-width: 60ch;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.55;
+    }
+
+    .heroActions{
+      margin-top: 22px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .ghost{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 11px 14px;
+      border-radius: 14px;
+      background: rgba(15,17,21,.06);
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 600;
+      transition: transform .12s ease, background .12s ease;
+      white-space: nowrap;
+    }
+
+    .ghost:hover{
+      transform: translateY(-1px);
+      background: rgba(15,17,21,.09);
+    }
+
+    .portraitWrap{
+      position: relative;
+      width: 100%;
+      min-height: 420px;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(15,17,21,.10);
+      transform: translateY(8px);
+      background:
+        radial-gradient(900px 420px at 30% 10%, rgba(255,255,255,.45), transparent 60%),
+        linear-gradient(135deg, rgba(122,31,43,.22), rgba(15,44,63,.22)),
+        rgba(15,17,21,.06);
+    }
+
+    .portrait{
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      filter: contrast(1.06) saturate(.92);
+      opacity: .96;
+    }
+
+    .portraitOverlay{
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(15,17,21,.08), rgba(15,17,21,.22));
+      mix-blend-mode: multiply;
+    }
+
+    .portraitCard{
+      position: absolute;
+      left: 18px;
+      bottom: 18px;
+      right: 18px;
+      padding: 16px 16px;
+      border-radius: 18px;
+      background: rgba(251,250,247,.78);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(15,17,21,.10);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .portraitCard strong{
+      display: block;
+      font-size: 14px;
+      letter-spacing: .2px;
+    }
+
+    .portraitCard span{
+      display: block;
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.35;
+    }
+
+    .pill{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      border-radius: 999px;
+      background: rgba(15,17,21,.06);
+      font-size: 13px;
+      color: var(--ink);
+      white-space: nowrap;
+    }
+
+    .pill i{
+      width: 10px;
+      height: 10px;
+      border-radius: 99px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      display: inline-block;
+    }
+
+    .statBand{
+      margin-top: 18px;
+      padding: 18px 0;
+      border-top: 1px solid var(--soft);
+      border-bottom: 1px solid var(--soft);
+      background: rgba(255,255,255,.40);
+      backdrop-filter: blur(10px);
+    }
+
+    .statGrid{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      align-items: stretch;
+    }
+
+    .stat{
+      border-radius: 18px;
+      padding: 14px 14px;
+      background: rgba(251,250,247,.65);
+      border: 1px solid rgba(15,17,21,.10);
+    }
+
+    .stat b{
+      display: block;
+      font-size: 24px;
+      letter-spacing: .2px;
+    }
+
+    .stat p{
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    .section{
+      padding: 54px 0;
+    }
+
+    .sectionHead{
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 16px;
+      align-items: end;
+      margin-bottom: 18px;
+    }
+
+    .sectionTitle{
+      margin: 0;
+      font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+      font-size: 30px;
+      letter-spacing: .01em;
+    }
+
+    .sectionNote{
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      text-align: right;
+      padding-bottom: 4px;
+    }
+
+    .cards{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .card{
+      border-radius: 22px;
+      padding: 18px;
+      background: var(--card);
+      border: 1px solid rgba(15,17,21,.10);
+      box-shadow: 0 14px 40px rgba(15,17,21,.08);
+      transition: transform .12s ease, box-shadow .12s ease;
+      position: relative;
+      overflow: hidden;
+      min-height: 170px;
+    }
+
+    .card:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 18px 55px rgba(15,17,21,.12);
+    }
+
+    .card::before{
+      content: "";
+      position: absolute;
+      inset: -40% -40% auto auto;
+      width: 240px;
+      height: 240px;
+      background: radial-gradient(circle at 30% 30%, rgba(122,31,43,.18), transparent 60%);
+      transform: rotate(16deg);
+      pointer-events: none;
+    }
+
+    .card h3{
+      margin: 0;
+      font-size: 16px;
+      letter-spacing: .2px;
+    }
+
+    .card p{
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.55;
+      max-width: 60ch;
+    }
+
+    .card a{
+      margin-top: 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--ink);
+      font-weight: 700;
+      font-size: 14px;
+      padding: 10px 12px;
+      border-radius: 14px;
+      background: rgba(15,17,21,.06);
+      transition: background .12s ease, transform .12s ease;
+    }
+
+    .card a:hover{
+      background: rgba(15,17,21,.09);
+      transform: translateY(-1px);
+    }
+
+    .quoteBlock{
+      padding: 44px 0 10px;
+    }
+
+    .quoteShell{
+      border-radius: 28px;
+      padding: 34px;
+      background: linear-gradient(135deg, rgba(15,17,21,.92), rgba(15,44,63,.88));
+      color: rgba(255,255,255,.92);
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .quoteShell::before{
+      content: "";
+      position: absolute;
+      inset: -40% auto auto -40%;
+      width: 520px;
+      height: 520px;
+      background: radial-gradient(circle at 40% 40%, rgba(122,31,43,.55), transparent 62%);
+      pointer-events: none;
+    }
+
+    .quoteShell p{
+      margin: 0;
+      font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+      font-size: clamp(22px, 2.5vw, 32px);
+      line-height: 1.18;
+      letter-spacing: .01em;
+      max-width: 46ch;
+    }
+
+    footer{
+      padding: 44px 0 54px;
+      border-top: 1px solid var(--soft);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .footerGrid{
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .footerLinks{
+      display: flex;
+      gap: 12px;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+    }
+
+    .footerLinks a{
+      padding: 10px 12px;
+      border-radius: 12px;
+      background: rgba(15,17,21,.06);
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    @media (max-width: 920px){
+      .heroGrid{ grid-template-columns: 1fr; }
+      .portraitWrap{ min-height: 360px; transform: none; }
+      .sectionHead{ grid-template-columns: 1fr; }
+      .sectionNote{ text-align: left; }
+      .cards{ grid-template-columns: 1fr; }
+      .statGrid{ grid-template-columns: 1fr; }
+      .nav{ display: none; }
+      .brandTag{ display: none; }
+    }
+  </style>
 </head>
+
 <body>
-
-<header class="header">
-  <div class="container">
-    <div class="headerInner">
-      <div class="brandBlock">
-        <div class="brandName">Dominique E. Thomas</div>
-        <div class="brandRole">Strategic and Organizational Architect for People, Policy, and Performance</div>
-      </div>
-      <nav class="nav" aria-label="Primary navigation">
-        <a class="active" href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="expertise.html">Expertise</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </div>
-</header>
-
-<main>
-
-  <section class="section band">
-  <div class="container">
-    <div class="hero">
-
-      <div class="heroCard">
-        <div class="kicker">Strategic and organizational architecture for scale and risk</div>
-        <h1>Designing people, policy, and performance systems leaders rely on.</h1>
-        <p class="small">I partner with leaders to design people systems that hold up under growth, risk, and scrutiny. From policy and compliance to organizational structure and decision making, I help organizations move forward with clarity and confidence.</p>
-        <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:18px;">
-          <a class="button" href="https://calendar.app.google/yJznCSFAs7UWpCMw9">Schedule a Conversation</a>
-          <a class="buttonGhost" href="contact.html">Contact</a>
-        </div>
-      </div>
-
-      <div class="heroAside">
-        <div class="portraitFrame">
-          <img class="portraitImg" src="assets/headshot.jpg" alt="Headshot of Dominique E. Thomas" onerror="this.style.display='none'" />
-          <div class="portraitAccent"></div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-       
-  <section class="section bandAlt">
-  <div class="container">
-    <div class="surface">
-      <div class="centerStatement">
-<div class="statementGrid">
-
-  <div class="statementCard">
-    Organizational design and people systems aligned to operating realities.
-  </div>
-
-  <div class="statementCard">
-    Risk, compliance, and escalation handled with context and clarity.
-  </div>
-
-  <div class="statementCard">
-     Experience-informed decision making across growth and transition points.
-  </div>
-
-</div>
-
-  </div>
-</div>
-</section>
-          
-  <!-- Social Proof updated to match your screenshot -->
-  <section class="section band">
+  <div class="topbar">
     <div class="container">
-      <div class="statsGrid">
-        <div class="statCard">
-          <div class="statNumber">15+</div>
-          <p class="statText">Years of experience in Human Resources </p>
-        </div>
-
-        <div class="statCard">
-          <div class="statNumber">100+</div>
-          <p class="statText">Organizations supported across venture backed startups, mid market companies, and established enterprises</p>
-        </div>
-
-        <div class="statCard">
-          <div class="statNumber">25,000+</div>
-          <p class="statText">Employees supported in multi state and global workforces</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services with increased spacing -->
-  <section class="section band">
-    <div class="container">
-      <div class="surface">
-        <div class="kicker">Areas of Impact</div>
-
-        <div class="grid two loose">
-          <a href="work-example-1-termination-risk.html" style="text-decoration:none; color:inherit;">
-  <div class="card">
-    <div class="cardTitle">Strategic Advisory at Points of Risk and Change</div>
-    <div class="small">Senior level decision support for complex people, policy, and performance issues where risk and business priorities intersect. Focused on clarity, tradeoffs, and forward movement.</div>
-  </div>
-</a>
-
-
-          <div class="card">
-            <div class="cardTitle">People and Organizational Architecture</div>
-            <div class="small">Designing the structures, workflows, and operating models that support growth without creating fragility. Built to scale, repeat, and hold up through transition, integration, and scrutiny.</div>
-          </div>
-
-          <a href="wwork-example-2-leave-administration.html" style="text-decoration:none; color:inherit;">
-  <div class="card">
-    <div class="cardTitle">Risk, Governance and Decision Support</div>
-    <div class="small">Integrating compliance, employee relations, and escalation frameworks into daily operations across multi state and complex environments. Designed to surface risk early, reduce exposure, and support consistent decision making.</div>
-  </div>
-</a>
-
-
-          <div class="card">
-            <div class="cardTitle">Leadership and Manager Effectiveness</div>
-            <div class="small">Strengthening leadership judgment and execution through practical tools, clear expectations, and documentation discipline. Focused on consistency, accountability, and reducing people related risk at the manager level.</div>
+      <div class="topbarInner">
+        <div class="brand">
+          <div class="brandMark" aria-hidden="true"></div>
+          <div>
+            <div class="brandName">Dominique E. Thomas</div>
+            <div class="brandTag">Strategic and Organizational Architect for People, Policy, and Performance</div>
           </div>
         </div>
 
-        <div style="margin-top:22px;">
-          <a class="button" href="expertise.html">Explore expertise</a>
-        </div>
+        <nav class="nav" aria-label="Primary navigation">
+          <a class="active" href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="expertise.html">Expertise</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <a class="cta" href="https://calendar.app.google/yJznCSFAs7UWpCMw9">Schedule a Conversation</a>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- Featured Expertise with increased spacing -->
- 
+  <main>
+    <section class="hero" aria-label="Hero">
+      <div class="container">
+        <div class="heroGrid">
+          <div>
+            <div class="kicker">
+              <span class="kickerDot" aria-hidden="true"></span>
+              Strategic and organizational architecture for scale and risk
+            </div>
 
-  <section class="section bandAlt">
+            <h1 class="headline">Designing people, policy, and performance systems leaders rely on.</h1>
+
+            <p class="subhead">
+              I partner with leaders to design people systems that hold up under growth, risk, and scrutiny. From policy and compliance to organizational structure and decision making, I help organizations move forward with clarity and confidence.
+            </p>
+
+            <div class="heroActions">
+              <a class="cta" href="https://calendar.app.google/yJznCSFAs7UWpCMw9">Schedule a Conversation</a>
+              <a class="ghost" href="contact.html">Contact</a>
+
+              <!-- PLACEHOLDER: If you want a short availability signal here, replace the text below -->
+              <span class="pill"><i aria-hidden="true"></i> PLACEHOLDER: Availability note</span>
+            </div>
+          </div>
+
+          <div class="portraitWrap">
+            <div class="portrait" style="background-image: url('assets/headshot.jpg');"></div>
+            <div class="portraitOverlay" aria-hidden="true"></div>
+
+            <div class="portraitCard">
+              <div>
+                <strong>PLACEHOLDER: Portrait card headline</strong>
+                <span>PLACEHOLDER: One line supporting statement</span>
+              </div>
+              <div class="pill"><i aria-hidden="true"></i> PLACEHOLDER: Location tag</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="statBand" aria-label="Stats">
+        <div class="container">
+          <div class="statGrid">
+            <div class="stat">
+              <b>15+</b>
+              <p>Years of experience in Human Resources</p>
+            </div>
+            <div class="stat">
+              <b>100+</b>
+              <p>Organizations supported across venture backed startups, mid market companies, and established enterprises</p>
+            </div>
+            <div class="stat">
+              <b>25,000+</b>
+              <p>Employees supported in multi state and global workforces</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quoteBlock" aria-label="Statement band">
+      <div class="container">
+        <div class="quoteShell">
+          <p>Organizational design and people systems aligned to operating realities.</p>
+          <!-- PLACEHOLDER: Optional short label under the statement -->
+          <!-- <span>PLACEHOLDER: Label</span> -->
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Statements">
+      <div class="container">
+        <div class="sectionHead">
+          <h2 class="sectionTitle">PLACEHOLDER: Section title</h2>
+          <div class="sectionNote">PLACEHOLDER</div>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Statement</h3>
+            <p>Organizational design and people systems aligned to operating realities.</p>
+          </article>
+
+          <article class="card">
+            <h3>Statement</h3>
+            <p>Risk, compliance, and escalation handled with context and clarity.</p>
+          </article>
+
+          <article class="card">
+            <h3>Statement</h3>
+            <p>Experience informed decision making across growth and transition points.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Areas of Impact">
+      <div class="container">
+        <div class="sectionHead">
+          <h2 class="sectionTitle">Areas of Impact</h2>
+          <div class="sectionNote">What I deliver</div>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Strategic Advisory at Points of Risk and Change</h3>
+            <p>Senior level decision support for complex people, policy, and performance issues where risk and business priorities intersect. Focused on clarity, tradeoffs, and forward movement.</p>
+            <a href="work-example-1-termination-risk.html">Open work example</a>
+          </article>
+
+          <article class="card">
+            <h3>People and Organizational Architecture</h3>
+            <p>Designing the structures, workflows, and operating models that support growth without creating fragility. Built to scale, repeat, and hold up through transition, integration, and scrutiny.</p>
+            <!-- PLACEHOLDER: Add a link if you want this card clickable -->
+            <a href="expertise.html">Explore expertise</a>
+          </article>
+
+          <article class="card">
+            <h3>Risk, Governance and Decision Support</h3>
+            <p>Integrating compliance, employee relations, and escalation frameworks into daily operations across multi state and complex environments. Designed to surface risk early, reduce exposure, and support consistent decision making.</p>
+            <a href="wwork-example-2-leave-administration.html">Open work example</a>
+          </article>
+
+          <article class="card">
+            <h3>Leadership and Manager Effectiveness</h3>
+            <p>Strengthening leadership judgment and execution through practical tools, clear expectations, and documentation discipline. Focused on consistency, accountability, and reducing people related risk at the manager level.</p>
+            <!-- PLACEHOLDER: Add a link if you want this card clickable -->
+            <a href="contact.html">Start a conversation</a>
+          </article>
+
+          <!-- PLACEHOLDER: The new layout is built for 3 across. This card keeps the grid balanced. -->
+          <article class="card">
+            <h3>PLACEHOLDER: Optional focus area</h3>
+            <p>PLACEHOLDER: Add or remove this card later.</p>
+            <a href="expertise.html">Explore expertise</a>
+          </article>
+
+          <!-- PLACEHOLDER: The new layout is built for 3 across. This card keeps the grid balanced. -->
+          <article class="card">
+            <h3>PLACEHOLDER: Optional focus area</h3>
+            <p>PLACEHOLDER: Add or remove this card later.</p>
+            <a href="contact.html">Contact</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Connect">
+      <div class="container">
+        <div class="sectionHead">
+          <h2 class="sectionTitle">Connect</h2>
+          <div class="sectionNote">Next step</div>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Connect</h3>
+            <p>I partner with leadership teams in the way the moment demands, from senior level advisory to hands on execution. I work inside the business to assess context, design practical systems, and support decisions that balance scale, risk, and reality.</p>
+            <a href="https://calendar.app.google/yJznCSFAs7UWpCMw9">Schedule a Conversation</a>
+          </article>
+
+          <article class="card">
+            <h3>PLACEHOLDER: Contact option</h3>
+            <p>PLACEHOLDER: Add a short note for email outreach if you want this card.</p>
+            <a href="contact.html">Email instead</a>
+          </article>
+
+          <article class="card">
+            <h3>PLACEHOLDER: Engagement types</h3>
+            <p>PLACEHOLDER: Add a one line description of how you engage.</p>
+            <a href="expertise.html">Explore expertise</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
     <div class="container">
-      <div class="surface">
-        <h2>Connect</h2>
-        <p class="small">I partner with leadership teams in the way the moment demands, from senior level advisory to hands on execution. I work inside the business to assess context, design practical systems, and support decisions that balance scale, risk, and reality.</p>
-        <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:16px;">
-          <a class="button" href="https://calendar.app.google/yJznCSFAs7UWpCMw9">Schedule a Conversation</a>
-          <a class="buttonGhost" href="contact.html">Email instead</a>
+      <div class="footerGrid">
+        <div>
+          <strong style="color: rgba(15,17,21,.9);">Dominique E. Thomas</strong>
+          <div>Dominique E. Thomas 2026</div>
+        </div>
+        <div class="footerLinks">
+          <a href="expertise.html">Expertise</a>
+          <a href="contact.html">Contact</a>
+          <a href="about.html">About</a>
         </div>
       </div>
     </div>
-  </section>
-
-</main>
-
-<footer class="footer">
-  <div class="container">Dominique E. Thomas 2026</div>
-</footer>
-
+  </footer>
 </body>
 </html>
