@@ -568,3 +568,98 @@ a:hover .card{
   .portraitImg{ height: 320px; }
   .positioningLead{ font-size: 26px; }
 }
+
+.compareWrap{
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(15,17,21,.10);
+  background: rgba(255,255,255,.58);
+  box-shadow: 0 14px 40px rgba(15,17,21,.08);
+}
+
+.compareTable{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.compareTable thead th{
+  text-align: left;
+  padding: 16px 16px;
+  font-size: 12px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: rgba(15,17,21,.72);
+  background: rgba(15,17,21,.04);
+  border-bottom: 1px solid rgba(15,17,21,.10);
+}
+
+.compareTable tbody td{
+  vertical-align: top;
+  padding: 18px 16px;
+  border-bottom: 1px solid rgba(15,17,21,.08);
+}
+
+.compareTable tbody tr:last-child td{
+  border-bottom: none;
+}
+
+.compareType{
+  font-family: Literata, Georgia, serif;
+  font-weight: 700;
+  font-size: 18px;
+  margin: 0 0 6px 0;
+}
+
+.compareOverview{
+  margin: 0;
+  color: rgba(15,17,21,.72);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.compareList{
+  margin: 0;
+  padding-left: 18px;
+  color: rgba(15,17,21,.72);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.compareList li{ margin: 0 0 10px 0; }
+.compareList li:last-child{ margin-bottom: 0; }
+
+.pricingNote{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: rgba(154,107,90,.08);
+  border: 1px solid rgba(154,107,90,.20);
+  color: rgba(15,17,21,.78);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.pricingDot{
+  width: 8px;
+  height: 8px;
+  border-radius: 99px;
+  background: var(--accent);
+  box-shadow: 0 0 0 6px rgba(154,107,90,.10);
+  flex: 0 0 auto;
+}
+
+/* Mobile: stack rows into cards */
+@media (max-width: 920px){
+  .compareTable thead{ display: none; }
+  .compareTable, .compareTable tbody, .compareTable tr, .compareTable td{ display: block; width: 100%; }
+  .compareTable tbody tr{
+    padding: 14px 14px;
+    border-bottom: 1px solid rgba(15,17,21,.10);
+  }
+  .compareTable tbody td{
+    border: none;
+    padding: 10px 2px;
+  }
+}
