@@ -4,213 +4,251 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>How to Work Together | Dominique E. Thomas</title>
-  <meta name="description" content="Engagement models: ad hoc support, advisory partnership, and project based work." />
+  <meta name="description" content="Four ways to engage with Dominique E. Thomas — ad hoc advisory, ongoing partnership, project-based systems work, and fractional HR leadership for organizations building their people infrastructure." />
   <link rel="stylesheet" href="assets/styles.css" />
+  <style>
+    .eng-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .eng-card {
+      background: var(--bg);
+      border: 1px solid var(--line);
+      border-radius: var(--radiusLg);
+      padding: 36px;
+      transition: border-color 0.2s, background 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+    .eng-card::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--teal);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.25s;
+    }
+    .eng-card:hover {
+      border-color: var(--teal-border);
+      background: var(--teal-bg);
+    }
+    .eng-card:hover::before {
+      transform: scaleX(1);
+    }
+    .eng-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: var(--teal-bg);
+      border: 1px solid var(--teal-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      font-size: 22px;
+    }
+    .eng-type {
+      font-size: 10px;
+      letter-spacing: 0.20em;
+      text-transform: uppercase;
+      color: var(--teal);
+      font-weight: 700;
+      margin: 0 0 8px;
+    }
+    .eng-title {
+      font-family: var(--fontDisplay);
+      font-size: 24px;
+      font-weight: 700;
+      margin: 0 0 12px;
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+    }
+    .eng-desc {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.68;
+      margin: 0 0 24px;
+    }
+    .eng-fits {
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 700;
+      margin: 0 0 12px;
+    }
+    .eng-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 8px;
+    }
+    .eng-list li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      font-size: 14px;
+      color: var(--text);
+      line-height: 1.55;
+    }
+    .eng-list li::before {
+      content: "→";
+      color: var(--teal);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .eng-badge {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 11px;
+      padding: 4px 12px;
+      border-radius: 99px;
+      background: var(--teal);
+      color: #fff;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+    @media (max-width: 720px) {
+      .eng-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X303G47873"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-X303G47873");
+  </script>
 </head>
-
 <body>
 
-<div class="topbar">
+<header class="header">
   <div class="container">
-    <div class="topbarInner">
-
-      <div class="brand">
-        <div class="brandMark" aria-hidden="true"></div>
-        <div>
-          <div class="brandName">Dominique E. Thomas</div>
-          <div class="brandTag">Strategic and Organizational Architect for People, Policy, and Performance</div>
-        </div>
+    <div class="headerInner">
+      <div class="brandBlock">
+        <div class="brandName">Dominique E. Thomas</div>
+        <div class="brandRole">HR and Workforce Leader &nbsp;|&nbsp; People, Policy &amp; Organizational Design</div>
       </div>
-
       <nav class="nav" aria-label="Primary navigation">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="expertise.html">Expertise</a>
+        <a href="expertise.html">Practice Areas</a>
         <a class="active" href="work-together.html">How to Work Together</a>
         <a href="contact.html">Contact</a>
       </nav>
-
-      <a class="cta" href="https://calendar.app.google/yJznCSFAs7UWpCMw9">Schedule a Conversation</a>
-
     </div>
   </div>
-</div>
+</header>
 
 <main>
 
-  <section class="hero">
+  <section style="padding: 80px 0 64px; border-bottom: 1px solid var(--line);">
     <div class="container">
-      <div style="max-width: 760px;">
-        <div class="kicker">
-          <span class="kickerDot" aria-hidden="true"></span>
-          Engagement models
-        </div>
-
-        <h1 class="headline">How we work together.</h1>
-
-        <p class="subhead">
-Engagements differ in structure and level of involvement, but all provide the same level of strategic partnership and executive judgment.
-</p>
-        </p>
-      </div>
-    </div>
-
-    <div class="statBand" aria-label="Pricing note">
-      <div class="container">
-        <div class="pricingNote">
-          <span class="pricingDot" aria-hidden="true"></span>
-          Engagements are scoped based on complexity, urgency, and level of involvement. Most work begins with a short conversation to clarify needs and determine the right model.
-        </div>
+      <div class="kicker">Ways to Work Together</div>
+      <h1>Find the right fit for what you need<span class="period">.</span></h1>
+      <p style="font-size: 17px; color: var(--muted); max-width: 600px; line-height: 1.7; margin-top: 16px;">Not every situation calls for the same level of involvement. Some things need a quick, experienced eye. Others need a steady partner over time. Here's how most engagements take shape.</p>
+      <div style="margin-top: 32px; display: inline-flex; align-items: center; gap: 12px; padding: 14px 20px; background: var(--teal-bg); border: 1px solid var(--teal-border); border-radius: var(--radius);">
+        <div style="width: 7px; height: 7px; border-radius: 99px; background: var(--teal); flex-shrink: 0;"></div>
+        <p style="font-size: 14px; color: var(--text); margin: 0; line-height: 1.5;">Scope and pricing are based on what you actually need — complexity, urgency, and level of involvement. Most things start with a short conversation.</p>
       </div>
     </div>
   </section>
 
-  <section class="section" aria-label="Engagement comparison">
+  <section class="section">
     <div class="container">
+      <div class="eng-grid">
 
-      <div class="compareWrap">
-        <table class="compareTable">
-          <thead>
-            <tr>
-              <th style="width: 26%;">Engagement type</th>
-              <th style="width: 38%;">Overview</th>
-              <th style="width: 36%;">Common examples</th>
-            </tr>
-          </thead>
+        <div class="eng-card">
+          <div class="eng-icon">⚡</div>
+          <p class="eng-type">01 — Quickest path</p>
+          <h3 class="eng-title">Ad Hoc</h3>
+          <p class="eng-desc">Focused guidance on a specific situation — without ongoing involvement. A clear start and finish, built around one question or decision. Best when you need experienced HR judgment quickly for a defined issue.</p>
+          <p class="eng-fits">Best for</p>
+          <ul class="eng-list">
+            <li>A second opinion on a high-risk employee situation</li>
+            <li>Termination risk or documentation review</li>
+            <li>A compliance or policy question</li>
+            <li>Coaching a manager through a hard conversation</li>
+          </ul>
+        </div>
 
-          <tbody>
+        <div class="eng-card">
+          <div class="eng-icon">🔄</div>
+          <div class="eng-badge">Most common</div>
+          <p class="eng-type">02 — Steady partnership</p>
+          <h3 class="eng-title">Ongoing Advisory</h3>
+          <p class="eng-desc">Context, continuity, and senior HR perspective as things evolve — not just for one issue, but across everything that comes up. Often structured as a retainer or regular advisory cadence.</p>
+          <p class="eng-fits">Best for</p>
+          <ul class="eng-list">
+            <li>Managing complexity through growth or transition</li>
+            <li>Consistent escalation guidance and risk support</li>
+            <li>Org design and leadership development over time</li>
+          </ul>
+        </div>
 
-            <tr>
-              <td>
-                <div class="compareType">Ad hoc</div>
-                <p class="compareOverview">Targeted guidance on a specific decision or immediate issue, without ongoing involvement.</p>
-              </td>
+        <div class="eng-card">
+          <div class="eng-icon">📐</div>
+          <p class="eng-type">03 — Scoped build</p>
+          <h3 class="eng-title">Project-Based</h3>
+          <p class="eng-desc">Defined scope work with clear deliverables tied to a specific system, process, or program — built with an implementation plan and milestones. Best when you need to build or improve a specific capability.</p>
+          <p class="eng-fits">Best for</p>
+          <ul class="eng-list">
+            <li>Policy and compliance framework development</li>
+            <li>Performance management system design</li>
+            <li>Manager training programs and toolkits</li>
+            <li>HRIS selection and implementation</li>
+          </ul>
+        </div>
 
-              <td>
-                <ul class="compareList">
-                  <li>Best for time sensitive questions where experienced HR judgment is needed quickly.</li>
-                  <li>Typically limited scope with clear start and finish.</li>
-                  <li>Structured as a defined consult, review, or decision support session.</li>
-                </ul>
-              </td>
+        <div class="eng-card">
+          <div class="eng-icon">🏗️</div>
+          <p class="eng-type">04 — Embedded leadership</p>
+          <h3 class="eng-title">Fractional HR Leadership</h3>
+          <p class="eng-desc">Senior HR leadership embedded in your organization — without a full-time hire. Strategy and hands-on execution, structured as a part-time or defined-term engagement for as long as you need it.</p>
+          <p class="eng-fits">Best for</p>
+          <ul class="eng-list">
+            <li>Acting Head of HR during a transition or growth period</li>
+            <li>Building HR infrastructure from the ground up</li>
+            <li>Multi-state compliance stabilization</li>
+            <li>Developing and mentoring an internal HR team</li>
+          </ul>
+        </div>
 
-              <td>
-                <ul class="compareList">
-                  <li>Second opinion on a high risk employee relations decision</li>
-                  <li>Review of documentation, performance narrative, or termination risk</li>
-                  <li>Policy interpretation or compliance risk assessment for a specific situation</li>
-                  <li>Manager guidance for a difficult conversation or escalation</li>
-                </ul>
-              </td>
-            </tr>
-
-            <tr>
-              <td>
-                <div class="compareType">Advisory</div>
-                <p class="compareOverview">Ongoing partnership providing continuity, context, and senior HR perspective across evolving priorities.</p>
-              </td>
-
-              <td>
-                <ul class="compareList">
-                  <li>Best for leaders managing complexity over time, not a single discrete issue.</li>
-                  <li>Provides consistent thought partnership and decision support across functions and moments.</li>
-                  <li>Often structured as a retainer or ongoing advisory cadence.</li>
-                </ul>
-              </td>
-
-              <td>
-                <ul class="compareList">
-                  <li>Executive decision support during growth, transition, or integration</li>
-                  <li>Ongoing risk governance and escalation framework guidance</li>
-                  <li>Organizational design, role clarity, and operating model refinement</li>
-                  <li>Leadership coaching and manager effectiveness reinforcement</li>
-                </ul>
-              </td>
-            </tr>
-<tr>
-  <td>
-    <div class="compareType">Fractional HR Leadership</div>
-    <p class="compareOverview">Embedded executive level partnership providing strategic direction, governance oversight, and organizational architecture without adding permanent headcount.</p>
-  </td>
-
-  <td>
-    <ul class="compareList">
-      <li>Provides consistent executive level guidance and decision support.</li>
-      <li>Balances strategic direction with operational clarity and structure.</li>
-      <li>Structured as a defined term or part time leadership engagement.</li>
-    </ul>
-  </td>
-
-  <td>
-    <ul class="compareList">
-      <li>Acting Head of HR or People leader during transition or growth</li>
-      <li>Organizational structure and governance design</li>
-      <li>Risk and compliance stabilization across multi state environments</li>
-      <li>Building and mentoring internal HR capability</li>
-    </ul>
-  </td>
-</tr>
-
-            <tr>
-              <td>
-                <div class="compareType">Project based</div>
-                <p class="compareOverview">Defined scope work with clear deliverables, timelines, and outcomes tied to a specific system or initiative.</p>
-              </td>
-
-              <td>
-                <ul class="compareList">
-                  <li>Best for building or improving a specific process, program, or capability.</li>
-                  <li>Work is scoped around deliverables and a clear implementation plan.</li>
-                  <li>Often structured as a fixed scope engagement with milestones.</li>
-                </ul>
-              </td>
-
-              <td>
-                <ul class="compareList">
-                  <li>Policy and compliance framework development</li>
-                  <li>Performance management system design and documentation tools</li>
-                  <li>Manager training, leader toolkits, and learning programs</li>
-                  <li>Investigation support or employee relations process redesign</li>
-                </ul>
-              </td>
-            </tr>
-
-          </tbody>
-        </table>
       </div>
-
     </div>
   </section>
 
-  <section class="section" aria-label="Call to action">
-    <div class="container">
-      <div class="cards">
-        <article class="card" style="grid-column: 1 / -1; text-align: center;">
-          <h3>Not sure which model fits your situation?</h3>
-          <p>Most engagements begin with a conversation to understand context, scope, and priorities. From there, we determine the most appropriate level of support.</p>
-          <div style="margin-top: 18px;">
-            <a class="cta" href="https://calendar.app.google/yJznCSFAs7UWpCMw9">Schedule a Conversation</a>
-            <a class="ghost" href="contact.html" style="margin-left: 10px;">Email instead</a>
-          </div>
-        </article>
+  <section class="sectionAlt">
+    <div class="container" style="text-align: center; max-width: 600px; margin: 0 auto;">
+      <div class="kicker" style="justify-content: center;">Not sure which fits?</div>
+      <h2>That's completely fine.</h2>
+      <p style="color: var(--muted); font-size: 16px; line-height: 1.7; margin-bottom: 32px;">Most people aren't sure before we talk. Share what's going on and we'll figure out the right level of support together. The first conversation is just that — a conversation.</p>
+      <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+        <a class="button" href="https://calendar.app.google/yJznCSFAs7UWpCMw9">Schedule a call</a>
+        <a class="buttonOutline" href="contact.html">Send a message instead</a>
       </div>
     </div>
   </section>
 
 </main>
 
-<footer>
+<footer class="footer">
   <div class="container">
-    <div class="footerGrid">
-      <div>
-        <strong style="color: rgba(15,17,21,.9); font-family: Literata, Georgia, serif;">Dominique E. Thomas</strong>
-        <div>Strategic and Organizational Architect for People, Policy, and Performance</div>
-      </div>
-      <div class="footerLinks">
+    <div class="footer-inner">
+      <div class="footer-name">Dominique E. Thomas</div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="expertise.html">Expertise</a>
+        <a href="expertise.html">Practice Areas</a>
         <a href="contact.html">Contact</a>
       </div>
+      <div class="footer-copy">&copy; Dominique E. Thomas 2026</div>
     </div>
   </div>
 </footer>
